@@ -17,6 +17,14 @@ framework:
     php_errors:
         log: true
 
+    exceptions:
+        App\Shared\Domain\Exception\NotFound:
+            status_code: 404
+        App\Shared\Domain\Exception\UnprocessableEntity:
+            status_code: 422
+        App\Shared\Domain\Exception\AccessDenied:
+            status_code: 403
+
 when@test:
     framework:
         test: true
